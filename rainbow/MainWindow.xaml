@@ -1,0 +1,66 @@
+﻿<Window x:Class="SpinUsingMultipleImages.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="rainbow_and_sun" Height="300" Width="300">
+    <Grid Margin="0,0,98,-20">
+        <Grid.Resources>
+            <Storyboard x:Key="rainbow">
+                <ObjectAnimationUsingKeyFrames Duration="0:0:2" Storyboard.TargetProperty="Source" RepeatBehavior="Forever">
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                        <DiscreteObjectKeyFrame.Value>
+                            <BitmapImage UriSource="image1.png"/>
+                        </DiscreteObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0.40">
+                        <DiscreteObjectKeyFrame.Value>
+                            <BitmapImage UriSource="image2.png"/>
+                        </DiscreteObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                        <DiscreteObjectKeyFrame.Value>
+                            <BitmapImage UriSource="image3.png"/>
+                        </DiscreteObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0.90">
+                        <DiscreteObjectKeyFrame.Value>
+                            <BitmapImage UriSource="image4.png"/>
+                        </DiscreteObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                    <DiscreteObjectKeyFrame KeyTime="0:0:1.15">
+                        <DiscreteObjectKeyFrame.Value>
+                            <BitmapImage UriSource="image5.png"/>
+                        </DiscreteObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                </ObjectAnimationUsingKeyFrames>
+            </Storyboard>
+            
+            <Storyboard x:Key="Sun360" Storyboard.TargetName="Sun" Storyboard.TargetProperty="RenderTransform.(RotateTransform.Angle)">
+                <DoubleAnimation From="0" To="360" BeginTime="0:0:0" Duration="0:0:4" RepeatBehavior="Forever" />
+            </Storyboard>
+            
+        </Grid.Resources>
+        
+        <Image Name="Rainbow" Margin="143,81,-99,81" HorizontalAlignment="Left" Width="150">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource rainbow}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+        
+        <Image Name="Sun" Source="sun.png" Width="128" Height="128" RenderTransformOrigin="0.5,0.5" Margin="8,81,58,81">
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource Sun360}" />
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Image.Triggers>
+            <Image.RenderTransform>
+                <RotateTransform Angle="0" />
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Window>

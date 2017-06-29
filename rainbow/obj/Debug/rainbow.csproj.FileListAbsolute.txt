@@ -1,0 +1,13 @@
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\rainbow.csprojResolveAssemblyReference.cache
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\MainWindow.baml
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\MainWindow.g.cs
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\App.g.cs
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\rainbow_MarkupCompile.cache
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\rainbow.g.resources
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\rainbow.Properties.Resources.resources
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\rainbow.csproj.GenerateResource.Cache
+D:\visualS\rainbow\rainbow\rainbow\bin\Debug\rainbow.exe.config
+D:\visualS\rainbow\rainbow\rainbow\bin\Debug\rainbow.exe
+D:\visualS\rainbow\rainbow\rainbow\bin\Debug\rainbow.pdb
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\rainbow.exe
+D:\visualS\rainbow\rainbow\rainbow\obj\Debug\rainbow.pdb
